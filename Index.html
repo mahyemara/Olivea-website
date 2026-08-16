@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olivéa | Premium Extra Virgin Olive Oil</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@400;500;600&family=Parisienne&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="topbar">
+    <button class="cart-button" id="cartButton">
+      🛒 Cart <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- HOME -->
+    <section id="home" class="page active">
+
+      <div class="hero">
+
+        <div class="logo">
+          <div class="olive-tree">🌳</div>
+
+          <div class="olive">
+            <span class="logo-name">olivéa</span>
+            <span class="logo-small">
+              PREMIUM EXTRA VIRGIN<br>
+              OLIVE OIL
+            </span>
+          </div>
+        </div>
+
+        <h1>Olivéa</h1>
+
+        <p class="subtitle">
+          Premium Extra Virgin Olive Oil
+        </p>
+
+        <p class="slogan">
+          From Our Farm to Your Table.
+        </p>
+
+        <div class="main-buttons">
+          <button data-page="about">About Us</button>
+          <button data-page="sizes">Sizes & Prices</button>
+          <button data-page="made">How It's Made</button>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT US -->
+    <section id="about" class="page">
+
+      <div class="content-card">
+
+        <button class="back-button" data-page="home">
+          ← Back
+        </button>
+
+        <p class="eyebrow">OLIVÉA</p>
+
+        <h2>About Us</h2>
+
+        <div class="gold-line"></div>
+
+        <p class="body-text">
+          This is what you have been waiting for.
+          Premium extra virgin olive oil extracted from
+          the highest quality Pical, Coratina, and Koroneiki
+          olives — planted, perfected, grown, gathered,
+          with care and love 💚
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- SIZES & PRICES -->
+    <section id="sizes" class="page">
+
+      <div class="content-card wide">
+
+        <button class="back-button" data-page="home">
+          ← Back
+        </button>
+
+        <p class="eyebrow">OLIVÉA</p>
+
+        <h2>Sizes & Prices</h2>
+
+        <div class="gold-line"></div>
+
+        <div id="products" class="products"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- HOW IT'S MADE -->
+    <section id="made" class="page">
+
+      <div class="content-card">
+
+        <button class="back-button" data-page="home">
+          ← Back
+        </button>
+
+        <p class="eyebrow">OLIVÉA</p>
+
+        <h2>How It's Made</h2>
+
+        <div class="gold-line"></div>
+
+        <p class="body-text">
+          <strong>
+            Every bottle of Olivéa begins with patience,
+            care, and a deep love for the land.
+          </strong>
+        </p>
+
+        <p class="body-text">
+          Our olives are carefully planted and nurtured,
+          allowing each tree the time and attention it deserves.
+          When the olives are ready, they are gathered with care
+          and transformed into the rich, aromatic oil we are
+          proud to share with you.
+        </p>
+
+        <p class="body-text">
+          From the olive tree to your table, every step is guided
+          by the same belief: when something is made with care,
+          you can taste the difference.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- CART -->
+    <section id="cart" class="page">
+
+      <div class="content-card wide">
+
+        <button class="back-button" data-page="home">
+          ← Back
+        </button>
+
+        <p class="eyebrow">OLIVÉA</p>
+
+        <h2>Your Cart</h2>
+
+        <div class="gold-line"></div>
+
+        <div id="cartItems"></div>
+
+        <div id="cartTotal" class="cart-total">
+          Total: 0 EGP
+        </div>
+
+        <button id="whatsappButton" class="whatsapp-button">
+          Text Us to Order
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    Copyright 2026, Olivéa
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
