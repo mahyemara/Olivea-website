@@ -1,0 +1,589 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --olive: #35451f;
+  --dark-olive: #253115;
+  --cream: #f7f1e3;
+  --light-cream: #fffaf0;
+  --gold: #b99a54;
+  --light-gold: #d8c27d;
+  --text: #27301e;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: "Montserrat", sans-serif;
+}
+
+/* CART BUTTON */
+
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+
+  display: flex;
+  justify-content: flex-end;
+
+  padding: 18px 20px;
+}
+
+.cart-button {
+  border: 1px solid var(--gold);
+  background: var(--cream);
+  color: var(--olive);
+
+  border-radius: 30px;
+
+  padding: 11px 16px;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.cart-button span {
+  display: inline-grid;
+  place-items: center;
+
+  min-width: 20px;
+  height: 20px;
+
+  margin-left: 5px;
+
+  border-radius: 50%;
+
+  background: var(--olive);
+  color: var(--cream);
+
+  font-size: 10px;
+}
+
+
+/* PAGES */
+
+.page {
+  display: none;
+
+  min-height: calc(100vh - 60px);
+
+  padding: 90px 20px 70px;
+}
+
+.page.active {
+  display: flex;
+}
+
+
+/* HOME */
+
+#home {
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  width: min(900px, 100%);
+  text-align: center;
+}
+
+
+/* LOGO */
+
+.logo {
+  position: relative;
+
+  width: 290px;
+  height: 290px;
+
+  margin: 0 auto 10px;
+}
+
+.olive-tree {
+  position: absolute;
+
+  top: -25px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  font-size: 120px;
+
+  filter: grayscale(1);
+  opacity: 0.85;
+}
+
+.olive {
+  position: absolute;
+
+  left: 50%;
+  top: 85px;
+
+  transform: translateX(-50%);
+
+  width: 135px;
+  height: 180px;
+
+  border-radius: 52% 48% 55% 45%;
+
+  background: var(--olive);
+
+  border: 3px solid var(--gold);
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-name {
+  color: var(--cream);
+
+  font-family: "Parisienne", cursive;
+
+  font-size: 40px;
+}
+
+.logo-small {
+  margin-top: 8px;
+
+  color: var(--light-gold);
+
+  font-size: 7px;
+
+  line-height: 1.7;
+
+  letter-spacing: 1.2px;
+}
+
+
+/* BRAND NAME */
+
+h1 {
+  margin: 0;
+
+  color: var(--olive);
+
+  font-family: "Parisienne", cursive;
+
+  font-size: clamp(70px, 13vw, 115px);
+
+  line-height: 0.9;
+}
+
+.subtitle {
+  margin: 14px 0 5px;
+
+  color: var(--olive);
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.22em;
+
+  text-transform: uppercase;
+}
+
+.slogan {
+  margin: 0 0 35px;
+
+  color: #6e5a32;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 25px;
+
+  font-style: italic;
+}
+
+
+/* MAIN BUTTONS */
+
+.main-buttons {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 14px;
+
+  max-width: 760px;
+
+  margin: auto;
+}
+
+.main-buttons button {
+  border: 1px solid var(--gold);
+
+  border-radius: 3px;
+
+  background: var(--olive);
+
+  color: var(--cream);
+
+  padding: 18px 12px;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.main-buttons button:hover {
+  background: var(--dark-olive);
+}
+
+
+/* CONTENT PAGES */
+
+.content-card {
+  width: min(780px, 100%);
+
+  margin: auto;
+
+  padding: clamp(28px, 6vw, 62px);
+
+  background: var(--light-cream);
+
+  border: 1px solid rgba(185, 154, 84, 0.65);
+
+  box-shadow: 0 12px 35px rgba(37, 49, 21, 0.07);
+}
+
+.content-card.wide {
+  width: min(950px, 100%);
+}
+
+
+/* BACK BUTTON */
+
+.back-button {
+  border: none;
+
+  background: transparent;
+
+  color: var(--olive);
+
+  padding: 0;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+
+/* HEADINGS */
+
+.eyebrow {
+  margin: 32px 0 5px;
+
+  color: var(--gold);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.25em;
+}
+
+h2 {
+  margin: 0;
+
+  color: var(--olive);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(45px, 8vw, 70px);
+
+  font-weight: 600;
+}
+
+.gold-line {
+  width: 70px;
+
+  height: 2px;
+
+  margin: 18px 0 30px;
+
+  background: var(--gold);
+}
+
+
+/* TEXT */
+
+.body-text {
+  max-width: 650px;
+
+  margin: 0 0 20px;
+
+  color: #4c5540;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 21px;
+
+  line-height: 1.75;
+}
+
+
+/* PRODUCTS */
+
+.products {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 15px;
+}
+
+.product {
+  padding: 25px;
+
+  background: var(--cream);
+
+  border: 1px solid rgba(185, 154, 84, 0.55);
+}
+
+.product-size {
+  color: var(--olive);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 28px;
+
+  font-weight: 600;
+}
+
+.product-price {
+  margin: 4px 0 18px;
+
+  color: #6e5a32;
+
+  font-size: 17px;
+
+  font-weight: 600;
+}
+
+.add-button {
+  width: 100%;
+
+  padding: 12px;
+
+  border: 1px solid var(--olive);
+
+  background: transparent;
+
+  color: var(--olive);
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background: var(--olive);
+
+  color: var(--cream);
+}
+
+
+/* CART */
+
+.cart-row {
+  display: grid;
+
+  grid-template-columns: 1fr auto auto;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid rgba(185, 154, 84, 0.4);
+}
+
+.cart-name {
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 21px;
+
+  font-weight: 600;
+}
+
+.cart-price {
+  margin-top: 4px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.qty-controls {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.qty-controls button {
+  width: 29px;
+
+  height: 29px;
+
+  border: 1px solid var(--gold);
+
+  background: transparent;
+
+  color: var(--olive);
+
+  cursor: pointer;
+}
+
+.remove-button {
+  padding: 6px 9px;
+
+  border: 1px solid var(--gold);
+
+  background: transparent;
+
+  color: var(--olive);
+
+  font-size: 10px;
+
+  cursor: pointer;
+}
+
+.empty-cart {
+  padding: 30px 0;
+
+  text-align: center;
+
+  color: #6b735f;
+}
+
+.cart-total {
+  margin: 25px 0;
+
+  color: var(--olive);
+
+  font-size: 22px;
+
+  font-weight: 600;
+
+  text-align: right;
+}
+
+
+/* WHATSAPP */
+
+.whatsapp-button {
+  width: 100%;
+
+  padding: 16px;
+
+  border: 1px solid var(--gold);
+
+  background: var(--olive);
+
+  color: var(--cream);
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.whatsapp-button:hover {
+  background: var(--dark-olive);
+}
+
+
+/* FOOTER */
+
+footer {
+  padding: 18px 20px 25px;
+
+  text-align: center;
+
+  color: #77745f;
+
+  font-size: 10px;
+
+  letter-spacing: 0.08em;
+}
+
+
+/* IPAD / PHONE */
+
+@media (max-width: 650px) {
+
+  .main-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .slogan {
+    font-size: 21px;
+  }
+
+  .cart-row {
+    grid-template-columns: 1fr;
+
+    gap: 9px;
+  }
+
+  .cart-total {
+    text-align: left;
+  }
+
+}
